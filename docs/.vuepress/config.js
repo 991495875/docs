@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 module.exports = {
-  base:'/docs/',
+  // base:'/docs/',
   title: "Linux技术探索",
   description: "优秀是一种习惯",
   head: [
