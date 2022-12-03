@@ -1,4 +1,7 @@
+const moment = require('moment');
+
 module.exports = {
+  base:'/docs/',
   title: "Linux技术探索",
   description: "优秀是一种习惯",
   head: [
@@ -10,6 +13,17 @@ module.exports = {
         content: "linuxcc.cn，Linux技术探索，编程开发，binbin，www.linuxcc.cn",
       },
     ],
+  ],
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          moment.locale('zh-cn')
+          return moment(timestamp).format('LLLL')
+        }
+      }
+    ]
   ],
   themeConfig: {
     logo: "/assets/img/logo.png",
